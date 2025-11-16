@@ -1,7 +1,3 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
-
 ### Application diagram 
 <img width="2069" height="1138" alt="image" src="https://github.com/user-attachments/assets/e05ecf04-be9c-4365-9f00-8259d07da3f3" />
 
@@ -94,6 +90,19 @@ API_TailorResume ~~~ SUPA_DB
 API_CoverLetter ~~~ SUPA_DB
 
 ```
+
+## Technologies
+
+- **Languages:** TypeScript, JavaScript (Node.js)
+- **Frontend:** React, Vite
+- **Backend:** Node.js, Express (see `server/index.js`)
+- **AI / LLM:** Google Gemini (Gemini Flash; usage in `services/geminiService.ts`)
+- **Database & Auth:** Supabase (Postgres, Auth, Storage)
+- **Vector DB / Embeddings:** Pinecone (optional)
+- **Storage:** AWS S3 (uploads) and Supabase Storage
+- **Cache / Sessions:** Redis (optional)
+- **Tooling & Build:** npm, Vite, TypeScript, tsconfig.json
+- **Dev server:** small Express proxy server (`npm run server`)
 
 # Run and deploy your AI Studio app
 
