@@ -1,11 +1,6 @@
 ### Application diagram 
 <img width="2069" height="1138" alt="image" src="https://github.com/user-attachments/assets/e05ecf04-be9c-4365-9f00-8259d07da3f3" />
 
-<img width="1001" height="638" alt="Screenshot 2025-11-16 at 12 24 43 PM" src="https://github.com/user-attachments/assets/7663f4eb-57c8-4ae2-91e3-42a82c014687" />
-
-<img width="1005" height="646" alt="Screenshot 2025-11-16 at 12 26 01 PM" src="https://github.com/user-attachments/assets/dc07c364-43eb-454f-8b06-a28194fa9244" />
-<img width="971" height="647" alt="Screenshot 2025-11-16 at 12 26 21 PM" src="https://github.com/user-attachments/assets/9e42c6e7-7541-40dc-acfb-9bf5020d8b0e" />
-<img width="796" height="631" alt="Screenshot 2025-11-16 at 12 26 35 PM" src="https://github.com/user-attachments/assets/0b45d610-6b14-4c10-9adc-4533497c8805" />
 
 
 ## Architecture Flow (Mermaid)
@@ -222,51 +217,8 @@ const json = await res.json();
 console.log(json);
 ```
 
-Server behavior
-- Uploaded file is written to S3 and a record is inserted into the `resumes` table with `s3_url`, `filename`, `size`, and `content_type`.
-- The server also returns a short-lived presigned URL for download.
+<img width="1001" height="638" alt="Screenshot 2025-11-16 at 12 24 43 PM" src="https://github.com/user-attachments/assets/7663f4eb-57c8-4ae2-91e3-42a82c014687" />
 
-Next steps after upload: implement resume parsing (Phase B) to extract structured JSON and model text from the uploaded PDF and persist it in the DB.
-
-## Inspiration
-
-LifePath was inspired by the confusing, time-consuming process of applying to jobs and tailoring materials for different roles. We wanted to build a practical assistant that leverages modern LLMs to help job-seekers iterate faster, discover skill gaps, and produce tailored resumes and cover letters with less friction.
-
-## What it does
-
-- Upload and store PDF resumes securely.
-- Extract and parse resume content (Phase B) into structured JSON for downstream processing.
-- Use LLMs to generate tailored resumes and context-aware cover letters for specific job descriptions.
-- Analyze job descriptions vs. a candidate's profile to highlight skill gaps and recommend resources.
-- Provide a conversational assistant for resume feedback and application guidance.
-
-## How we built it
-
-The app combines a React + TypeScript front-end (Vite) with a small Node/Express backend that proxies sensitive AI calls. Google Gemini is used for LLM tasks via `services/geminiService.ts`. Supabase provides Postgres storage, authentication, and optional file storage; AWS S3 support is included for uploads. Pinecone is supported for embedding storage and vector search. The codebase is modular so components like the Resume Mentor, Application Assistant, and Skill Gap Analyzer can evolve independently.
-
-## Challenges we ran into
-
-- Extracting accurate structured data from arbitrary PDF resumes — PDF layouts vary widely.
-- Prompt engineering for consistent, high-quality LLM output across different resume formats.
-- Balancing privacy and usability when handling sensitive resume content and API keys.
-- Designing an embedding + retrieval flow that is both fast and cost-effective for frequent queries.
-
-## Accomplishments that we're proud of
-
-- An end-to-end upload pipeline with secure storage and metadata persistence.
-- A modular AI pipeline that can generate tailored resumes and cover letters from parsed content.
-- Flexible architecture that supports multiple storage and vector backends (Supabase, S3, Pinecone).
-
-## What we learned
-
-- LLMs greatly accelerate content generation but require careful prompts and validation.
-- Reliable PDF parsing requires layered approaches (OCR, heuristics, and ML when needed).
-- Small, server-side proxies reduce exposure of API keys and enable safer integrations.
-
-## What's next for LifePath
-
-- Harden authentication and per-user data isolation (Supabase auth / JWT).
-- Complete the Phase B resume parser and add more robust parsing tests.
-- Add analytics, user settings, and integrations (LinkedIn, job boards).
-- Improve long-term storage of embeddings and reduce inference costs with batching and caching.
-
+<img width="1005" height="646" alt="Screenshot 2025-11-16 at 12 26 01 PM" src="https://github.com/user-attachments/assets/dc07c364-43eb-454f-8b06-a28194fa9244" />
+<img width="971" height="647" alt="Screenshot 2025-11-16 at 12 26 21 PM" src="https://github.com/user-attachments/assets/9e42c6e7-7541-40dc-acfb-9bf5020d8b0e" />
+<img width="796" height="631" alt="Screenshot 2025-11-16 at 12 26 35 PM" src="https://github.com/user-attachments/assets/0b45d610-6b14-4c10-9adc-4533497c8805" />
