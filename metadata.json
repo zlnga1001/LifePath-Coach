@@ -1,0 +1,7 @@
+{
+  "name": "LifePath Coach",
+  "description": "An AI career mentor that reads your resume, interrogates your experience like a real coach, and builds personalized upskilling tracks so low-income and underrepresented students can close the gap faster.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
