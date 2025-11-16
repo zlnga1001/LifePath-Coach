@@ -1,7 +1,15 @@
 ### Application diagram 
 <img width="2069" height="1138" alt="image" src="https://github.com/user-attachments/assets/e05ecf04-be9c-4365-9f00-8259d07da3f3" />
 
+<img width="1001" height="638" alt="Screenshot 2025-11-16 at 12 24 43 PM" src="https://github.com/user-attachments/assets/7663f4eb-57c8-4ae2-91e3-42a82c014687" />
+
+<img width="1005" height="646" alt="Screenshot 2025-11-16 at 12 26 01 PM" src="https://github.com/user-attachments/assets/dc07c364-43eb-454f-8b06-a28194fa9244" />
+<img width="971" height="647" alt="Screenshot 2025-11-16 at 12 26 21 PM" src="https://github.com/user-attachments/assets/9e42c6e7-7541-40dc-acfb-9bf5020d8b0e" />
+<img width="796" height="631" alt="Screenshot 2025-11-16 at 12 26 35 PM" src="https://github.com/user-attachments/assets/0b45d610-6b14-4c10-9adc-4533497c8805" />
+
+
 ## Architecture Flow (Mermaid)
+
 
 ```mermaid
 flowchart TD
